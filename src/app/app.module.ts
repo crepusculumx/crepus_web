@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { zh_CN } from 'ng-zorro-antd/i18n';
@@ -10,10 +9,12 @@ import zh from '@angular/common/locales/zh';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IconsProviderModule } from './icons-provider.module';
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { NzMenuModule } from 'ng-zorro-antd/menu';
-import { AppInitializerProvider } from './app-initializer.service';
+import { IconsProviderModule } from './services/icons-provider.module';
+import { AppInitializerProvider } from './services/app-initializer.service';
+
+import { LayoutModule } from './layout/layout.module';
+import { RouterModule } from '@angular/router';
+import { RoutesModule } from './routes/routes.module';
 
 registerLocaleData(zh);
 
@@ -21,13 +22,13 @@ registerLocaleData(zh);
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     IconsProviderModule,
-    NzLayoutModule,
-    NzMenuModule,
+    RouterModule,
+    LayoutModule,
+    RoutesModule,
   ],
   providers: [AppInitializerProvider, { provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent],
