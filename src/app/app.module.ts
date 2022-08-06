@@ -17,9 +17,7 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 registerLocaleData(zh);
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -28,11 +26,9 @@ registerLocaleData(zh);
     BrowserAnimationsModule,
     IconsProviderModule,
     NzLayoutModule,
-    NzMenuModule
+    NzMenuModule,
   ],
-  providers: [
-    { provide: NZ_I18N, useValue: zh_CN }
-  ],
-  bootstrap: [AppComponent]
+  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
