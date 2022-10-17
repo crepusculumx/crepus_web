@@ -32,6 +32,8 @@ import { NzTagModule } from 'ng-zorro-antd/tag';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { NzTreeModule } from 'ng-zorro-antd/tree';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
+import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
+import { NzTypographyModule } from 'ng-zorro-antd/typography';
 
 export const SHARED_ZORRO_MODULES = [
   NzFormModule,
@@ -68,4 +70,6 @@ export const SHARED_ZORRO_MODULES = [
   NzTreeModule,
   NzSliderModule,
   NzCollapseModule,
+  NzPageHeaderModule,
+  NzTypographyModule,
 ];

@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutBasicComponent } from '../layout/basic/basic.component';
+import { ToolBoxModule } from './tool-box/tool-box.module';
 
 const routes: Routes = [
   {
     path: '',
     component: LayoutBasicComponent,
     children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: '', redirectTo: 'tool-box', pathMatch: 'full' },
       {
-        path: 'home',
+        path: 'tool-box',
         loadChildren: () =>
-          import('./welcome/welcome.module').then((m) => m.WelcomeModule),
+          import('./tool-box/tool-box.module').then((m) => m.ToolBoxModule),
       },
     ],
   },
@@ -23,6 +24,7 @@ const routes: Routes = [
       useHash: true,
       scrollPositionRestoration: 'top',
     }),
+    ToolBoxModule,
   ],
   exports: [RouterModule],
 })

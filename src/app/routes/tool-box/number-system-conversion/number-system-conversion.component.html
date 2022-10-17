@@ -1,0 +1,26 @@
+<nz-page-header nzTitle="进制转换" [nzGhost]="false"></nz-page-header>
+
+<nz-card>
+  <h5 nz-typography>输入</h5>
+
+  <nz-input-group nzAddOnBefore="10">
+    <input type="text" nz-input />
+  </nz-input-group>
+</nz-card>
+
+<nz-card>
+  <h5 nz-typography>输出</h5>
+  <nz-input-group nzAddOnBefore="输出">
+    <input type="text" nz-input />
+  </nz-input-group>
+  <nz-divider></nz-divider>
+
+  <nz-space class="buttons" nzSize="middle">
+    <button *nzSpaceItem nz-button nzShape="circle">
+      <span nz-icon nzType="plus"></span>
+    </button>
+    <button *nzSpaceItem nz-button nzShape="circle">
+      <span nz-icon nzType="minus"></span>
+    </button>
+  </nz-space>
+</nz-card>
